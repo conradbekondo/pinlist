@@ -1,27 +1,32 @@
-# Pinlist
+# SolidStart
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
 
-## Development server
+## Creating a project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```bash
+# create a new project in the current directory
+npm init solid@latest
 
-## Code scaffolding
+# create a new project in my-app
+npm init solid@latest my-app
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Developing
 
-## Build
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm run dev
 
-## Running unit tests
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Building
 
-## Running end-to-end tests
+Solid apps are built with _presets_, which optimise your project for deployment to different environments.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
